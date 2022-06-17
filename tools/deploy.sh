@@ -10,7 +10,6 @@ test ${os_ver} == "centos7" && echo "Start Tasks." || exit 99
 
 
 # global variable
-auth_passwd="lark"
 auth_filename="auth-2fa.py"
 pam_so="pam_python.so"
 
@@ -41,10 +40,8 @@ if [[ $? -ne 0 ]]; then
 fi
 
 
-
 # code
 cp -a ${currentdir}/${auth_filename} /lib64/security/${auth_filename}
-
 
 
 # sshd pam
@@ -53,7 +50,6 @@ line=`awk '/^auth/ { c=NR } END { print c }' /etc/pam.d/sshd`
 content="auth       requisite    ${pam_so} ${auth_filename}"
 
 sed -i "${line}a${content}" /etc/pam.d/sshd
-
 
 
 # sshd_config
