@@ -14,7 +14,7 @@ def auth_otp(pamh, user):
     for attempt in range(0, 3):
         msg = pamh.Message(pamh.PAM_PROMPT_ECHO_OFF, "Enter 2-factor auth: ")
         response = pamh.conversation(msg)
-        if response.resp == "${auth_passwd}":
+        if response.resp == "helloworld":
             auth_log("user: {0} login successful with PIN.".format(user))
             return pamh.PAM_SUCCESS
         else:
