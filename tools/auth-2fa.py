@@ -23,7 +23,6 @@ def auth_otp(pamh, user):
             return pamh.PAM_AUTH_ERR
 
 
-
 def pam_sm_authenticate(pamh, flags, argv):
     """
     Determine the 2FA string entered by the user.
@@ -62,5 +61,3 @@ def pam_sm_close_session(pamh, flags, argv):
 
 def pam_sm_chauthtok(pamh, flags, argv):
     return pamh.PAM_SUCCESS
-
-EOF
