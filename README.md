@@ -3,6 +3,8 @@
 构建 PAM（pam_python）模块的环境登录黑盒
 - 双因素认证-Demo搭建：2FA（Two-factor authentication）
 
+- 使用场景：Centos7.x / python2.7
+
 - 登录测试
 ```shell
 [view@localhost ~]$ ssh admin@10.0.0.139
