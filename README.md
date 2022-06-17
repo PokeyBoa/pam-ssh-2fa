@@ -1,5 +1,8 @@
 # pam-ssh-2fa
 
+构建 PAM（pam_python）模块的环境登录黑盒
+- 双因素认证-Demo搭建：2FA（Two-factor authentication）
+
 - 登录测试
 ```shell
 [view@localhost ~]$ ssh admin@10.0.0.139
