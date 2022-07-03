@@ -7,7 +7,7 @@
 ```shell
 # centos7 / python2.7 / root下运行
 cd pam-ssh-2fa/
-sh run.sh
+sh reploy.sh
 ```
 
 - 修改2FA密码：
